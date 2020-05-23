@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+li {
+    /* リストのドットを無くす */
+    list-style: none;
+}
+header {
+    background: rgba(36, 139, 159);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+.logo {
+    height: 36px;
+}
+.burger {
+    cursor: pointer;
+}
+/* バーガーメニュー（三本線） */
+.burger div {
+    width: 22px;
+    height: 2px;
+    background-color: rgb(90, 90, 90);
+    margin: 5px;
+    border-radius: 3px;
+}
+nav {
+    display: none;
+}
+/* 画面の幅が狭い時 */
+@media screen and (min-width: 450px) {
+    nav {
+        display: block;
+    }
+    .nav-links {
+        display: flex;
+    }
+    .nav-links > li {
+        margin-left: 18px;
+    }
+    .burger {
+        display: none;
+    }
+}
